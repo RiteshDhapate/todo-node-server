@@ -14,7 +14,7 @@ const dbConnection =async()=>{
 dbConnection();
 app.use(express.json());
 const corsOptions = {
-  origin: '*', // Replace with your client's origin
+  origin: 'http://localhost:3000', // Replace with your client's origin
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Allow cookies to be sent
   optionsSuccessStatus: 204, // Some legacy browsers (IE11) may not understand 204
