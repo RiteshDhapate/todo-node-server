@@ -14,7 +14,10 @@ const dbConnection =async()=>{
 dbConnection();
 app.use(express.json());
 app.use(cors({
-    origin:"https://todo-react-app-ritesh.vercel.app"
+    origin:'https://todo-react-app-ritesh.vercel.app',
+     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // allow session cookies from the browser to be sent
+    optionsSuccessStatus: 204
 }));
 app.use("/",route);
 const PORT = process.env.PORT || 2000
