@@ -14,7 +14,7 @@ const dbConnection =async()=>{
 dbConnection();
 app.use(express.json());
 app.use(cors({
-    origin:"*"
+    origin:"https://todo-node-server-ozyn0vd5m-riteshdhapates-projects.vercel.app"
 }));
 app.use("/",route);
 const PORT = process.env.PORT || 2000
