@@ -13,7 +13,9 @@ const dbConnection =async()=>{
 }
 dbConnection();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin:"*"
+}));
 app.use("/",route);
 const PORT = process.env.PORT || 2000
 app.listen(PORT,()=>console.log("server is running 2000 port"))
