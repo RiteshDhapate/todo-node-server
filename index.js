@@ -19,8 +19,13 @@ const corsOptions = {
   credentials: true, // Allow cookies to be sent
   optionsSuccessStatus: 204, // Some legacy browsers (IE11) may not understand 204
 };
+app.use(cors());
+app.options('*', cors({
+  origin: '*',
+  credentials: true,
+}));
 
-app.use(cors(corsOptions));
+
 app.use("/",route);
 const PORT = process.env.PORT || 2000
 app.listen(PORT,()=>console.log("server is running 2000 port"))
